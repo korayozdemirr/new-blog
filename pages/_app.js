@@ -7,7 +7,6 @@ function MyApp({ Component, pageProps }) {
   const myMenu = menu
   const router = useRouter()
   const result = myMenu.find(({ href }) => href === router.asPath)
-  console.log(result)
   return (
     <div className="dark">
       <Head>
