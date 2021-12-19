@@ -16,7 +16,6 @@ function MyApp({ Component, pageProps }) {
     },
     ...menu
   ])
-  console.log(myMenu)
   const router = useRouter()
   const result = myMenu.find(({ href }) => href === router.asPath)
   return (
