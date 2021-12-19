@@ -2,9 +2,11 @@ import '../styles/global.css'
 import Header from '../components/header/'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
+import { useState } from 'react'
 import { menu } from '../components/header/Menu'
 function MyApp({ Component, pageProps }) {
   const myMenu = menu
+
   const router = useRouter()
   const result = myMenu.find(({ href }) => href === router.asPath)
   return (

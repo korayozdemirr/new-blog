@@ -17,6 +17,14 @@ export const menu = [
   {
     name: 'İletişim',
     href: '/contact'
+  },
+  {
+    name: '404',
+    href: '/404'
+  },
+  {
+    name: '500',
+    href: '/500'
   }
 ]
 export default function Menu() {
@@ -33,18 +41,21 @@ export default function Menu() {
   return (
     <div className="flex flex-grow items-center ">
       <ul className="hidden lg:flex flex-row ml-auto">
-        {menu.map((item, index) => (
-          <li
-            className={
-              item.href === router.asPath ? 'menuBtn active' : 'menuBtn'
-            }
-            key={index}
-          >
-            <Link href={item.href}>
-              <a>{item.name}</a>
-            </Link>
-          </li>
-        ))}
+        {menu.map((item, index) => {
+          index > 3 ? (item.name = '') : ''
+          return (
+            <li
+              className={
+                item.href === router.asPath ? 'menuBtn active' : 'menuBtn'
+              }
+              key={index}
+            >
+              <Link href={item.href}>
+                <a>{item.name}</a>
+              </Link>
+            </li>
+          )
+        })}
         <li>
           <svg
             xmlns="http://www.w3.org/2000/svg"
