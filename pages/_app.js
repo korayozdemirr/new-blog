@@ -5,8 +5,18 @@ import { useRouter } from 'next/router'
 import { useState } from 'react'
 import { menu } from '../components/header/Menu'
 function MyApp({ Component, pageProps }) {
-  const myMenu = menu
-
+  const [myMenu, setmyMenu] = useState([
+    {
+      name: '404',
+      href: '/404'
+    },
+    {
+      name: '500',
+      href: '/500'
+    },
+    ...menu
+  ])
+  console.log(myMenu)
   const router = useRouter()
   const result = myMenu.find(({ href }) => href === router.asPath)
   return (

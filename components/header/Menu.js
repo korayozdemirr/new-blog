@@ -17,14 +17,6 @@ export const menu = [
   {
     name: 'İletişim',
     href: '/contact'
-  },
-  {
-    name: '404',
-    href: '/404'
-  },
-  {
-    name: '500',
-    href: '/500'
   }
 ]
 export default function Menu() {
