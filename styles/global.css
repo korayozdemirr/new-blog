@@ -4,6 +4,9 @@
 
 @layer components {
   .site-container {
-    @apply max-w-2xl mx-auto;
+    @apply max-w-screen-2xl mx-auto h-24 bg-white items-center justify-center;
+  }
+  .site-4xl-container {
+    @apply max-w-4xl mx-auto;
   }
 }
