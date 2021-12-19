@@ -1,12 +1,50 @@
 @tailwind base;
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+}
 @tailwind components;
 @tailwind utilities;
 
 @layer components {
-  .site-container {
-    @apply max-w-screen-2xl mx-auto h-24 bg-white items-center justify-center;
+  .menuBtn {
+    @apply px-3 py-0 transition-all relative text-xl text-gray-400 hover:text-gray-900;
   }
-  .site-4xl-container {
-    @apply max-w-4xl mx-auto;
+  .active {
+    @apply text-gray-900;
+  }
+  .hamBtn {
+    @apply relative flex justify-center items-center w-6 h-6 cursor-pointer mt-1;
+  }
+  .ham__Btn {
+    @apply w-4 h-[2px] bg-gray-900 rounded-sm;
+  }
+  .ham__Btn::before,
+  .ham__Btn::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 2px;
+    border-radius: 2px;
+    background: rgba(17, 24, 39, var(--tw-bg-opacity));
+    transition: all 0.5s ease-in-out;
+  }
+  .ham__Btn::before {
+    transform: translateY(-6px);
+  }
+  .ham__Btn::after {
+    transform: translateY(6px);
+  }
+  .hamBtn.open .ham__Btn {
+    transform: translateX(-10px);
+    background: transparent;
+  }
+  .hamBtn.open .ham__Btn::before {
+    transform: rotate(45deg) translate(6px, -6px);
+  }
+  .hamBtn.open .ham__Btn::after {
+    transform: rotate(-45deg) translate(6px, 6px);
   }
 }
