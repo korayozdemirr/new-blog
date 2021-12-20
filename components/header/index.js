@@ -7,7 +7,7 @@ export default function Header() {
       style={{ boxShadow: '0 3px 9px rgb(0 0 0 /5%)' }}
     >
       <div>
-        <nav className=" mx-auto flex-row flex-wrap relative flex items-center justify-between xl:max-w-6xl lg:max-w-5xl ">
+        <nav className=" mx-auto flex-row flex-wrap relative flex items-center justify-between xl:max-w-6xl lg:max-w-5xl md:max-w-3xl ">
           <Logo />
           <Menu />
         </nav>

@@ -1,6 +1,6 @@
 export default function Left() {
   return (
-    <div className="relative mt-24 h-full space-y-4">
+    <div className="relative mt-12 h-96  space-y-4">
       <h3 className="text-gray-500 font-semibold text-2xl">Merhaba</h3>
       <p className="text-gray-900 text-2xl">
         Ben Koray Özdemir. Ben bir <b>dijital pazarlama</b> uzmanıyım.
